@@ -1,0 +1,1 @@
+<h1>Lister les barèmes</h1>
