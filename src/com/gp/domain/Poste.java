@@ -5,11 +5,14 @@ package com.gp.domain;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -33,6 +36,12 @@ public class Poste implements java.io.Serializable {
 	public Poste() {
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Poste : -----------------------------\n"+
+				"Date d'embauche : "+this.dateembauche+"\n"+this.affectation+"\n-----------------------------------\n";
+	}
 	public Poste(Affectation affectation, Date dateembauche,
 			Set<Salarie> salaries) {
 		this.affectation = affectation;
@@ -51,7 +60,7 @@ public class Poste implements java.io.Serializable {
 		this.posteId = posteId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "affectationID")
 	public Affectation getAffectation() {
 		return this.affectation;

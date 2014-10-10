@@ -4,11 +4,14 @@ package com.gp.domain;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -32,6 +35,12 @@ public class Etatcivile implements java.io.Serializable {
 	public Etatcivile() {
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Etat civil :-----------------\n"+this.civilite+" "+this.nom+" "+this.prenom+"\nMatricule :"+this.matricule+" "+this.situationfamiliale+
+				"\n---------------------------------------\n";
+	}
 	public Etatcivile(String civilite, String matricule, String nom,
 			String prenom, String situationfamiliale, Set<Salarie> salaries,
 			Set<Enfant> enfants) {
@@ -100,7 +109,7 @@ public class Etatcivile implements java.io.Serializable {
 		this.situationfamiliale = situationfamiliale;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "etatcivile")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "etatcivile")
 	public Set<Salarie> getSalaries() {
 		return this.salaries;
 	}
@@ -109,7 +118,7 @@ public class Etatcivile implements java.io.Serializable {
 		this.salaries = salaries;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "etatcivile")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "etatcivile")
 	public Set<Enfant> getEnfants() {
 		return this.enfants;
 	}

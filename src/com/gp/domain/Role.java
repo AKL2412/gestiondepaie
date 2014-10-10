@@ -1,6 +1,6 @@
 package com.gp.domain;
 
-// Generated 14 sept. 2014 16:09:18 by Hibernate Tools 3.4.0.CR1
+// Generated 19 sept. 2014 14:24:14 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,19 +23,23 @@ public class Role implements java.io.Serializable {
 	private Integer roleId;
 	private String code;
 	private String detail;
+	private int num;
 	private Set<Utilisateur> utilisateurs = new HashSet<Utilisateur>(0);
 
 	public Role() {
 	}
 
-	public Role(String code, String detail) {
+	public Role(String code, String detail, int num) {
 		this.code = code;
 		this.detail = detail;
+		this.num = num;
 	}
 
-	public Role(String code, String detail, Set<Utilisateur> utilisateurs) {
+	public Role(String code, String detail, int num,
+			Set<Utilisateur> utilisateurs) {
 		this.code = code;
 		this.detail = detail;
+		this.num = num;
 		this.utilisateurs = utilisateurs;
 	}
 
@@ -66,6 +70,15 @@ public class Role implements java.io.Serializable {
 
 	public void setDetail(String detail) {
 		this.detail = detail;
+	}
+
+	@Column(name = "num", nullable = false)
+	public int getNum() {
+		return this.num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "role")

@@ -23,13 +23,7 @@
 		/WEB-INF/spring-security.xml
 	</param-value>
   </context-param>
-  <context-param>
-    <description>Location to store uploaded file</description>
-    <param-name>file-upload</param-name>
-    <param-value>
-       C:\Users\Junior Aby\Documents\web-project\sppinr\WebContent\ressources\profil
-     </param-value>
-  </context-param>
+  
   
   <context-param>
     <description>Documents des salariés des sociétés</description>
@@ -38,7 +32,13 @@
        C:\Users\Junior Aby\Documents\web-project\GestPaie\WebContent\documents\
      </param-value>
   </context-param>
-  
+  <context-param>
+    <description>Image de profil par defaut</description>
+    <param-name>default-profil</param-name>
+    <param-value>
+       C:\Users\Junior Aby\Documents\web-project\GestPaie\WebContent\documents\profil\default.png
+     </param-value>
+  </context-param>
   <filter>
     <filter-name>springSecurityFilterChain</filter-name>
     <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>

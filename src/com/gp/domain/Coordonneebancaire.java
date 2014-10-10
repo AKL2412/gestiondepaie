@@ -4,11 +4,14 @@ package com.gp.domain;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -27,6 +30,11 @@ public class Coordonneebancaire implements java.io.Serializable {
 	private String libellecompte;
 	private Set<Salarie> salaries = new HashSet<Salarie>(0);
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Banque :"+this.banque+" Agence : "+this.agence+"\nlibelle compte: "+this.libellecompte+" compte : "+this.compte;
+	}
 	public Coordonneebancaire() {
 	}
 
