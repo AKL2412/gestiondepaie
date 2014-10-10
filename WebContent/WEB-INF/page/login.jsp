@@ -6,32 +6,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="<c:url value="/sources/css/app.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/sources/css/bootstrap.css" /> ">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Connexion</title>
+<style type="text/css">
+	body{
+		margin:0 auto;
+		width:50%;
+	}
+</style>
 </head>
 <body>
-<div id="authentification">
-	<form name='f' action="<c:url value="/j_spring_security_check"/>"
-		method='post'>
-	
-		<div class="input" style="width: 200px"> 
-			<input type="text"
-				name="j_username" value="" id="input-login-username" placeholder="Login-nom utilisateur">
-			<input  type="password" 
-				name="j_password" id="input-login-pass" placeholder="Mot de passe">
-				<label for="checkbox">Se souvenir de moi</label><input id="checkbox" name="j_remember_me" type="checkbox">
 
-		</div>
-		<div class="submit" style="text-align: center">
-			<input type="submit" value="Se connecter" class="btn" id="valider-btn-login">
-		</div>
-
-	</form>
-	<c:if test="${SPRING_SECURITY_LAST_EXCEPTION != null}">
-		<div class="error" style="text-align: center">
-<!-- 			Votre tentative d'authentification a échouée, Réessayez... <br/> -->
-<!-- 			Raisons :<br>  -->
+<c:if test="${SPRING_SECURITY_LAST_EXCEPTION != null}">
+		<div class="alert alert-danger ">
 			<strong>
 			<c:choose>
 				<c:when test="${fn:indexOf(SPRING_SECURITY_LAST_EXCEPTION.message, 'User is disabled') != -1}">
@@ -48,7 +36,20 @@
 			<br>			
 		</div>
 	</c:if>
-</div>
+    <form class="form-signin" role="form" name='f' action="<c:url value="/j_spring_security_check"/>" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text"
+				name="j_username" class="form-control" value="" id="input-login-username" required autofocus placeholder="Login-nom utilisateur">
+        <input type="password" class="form-control" required
+        name="j_password" id="input-login-pass" placeholder="Mot de passe" >
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me" name="j_remember_me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      
+      
+
 	
 </body>
 </html>

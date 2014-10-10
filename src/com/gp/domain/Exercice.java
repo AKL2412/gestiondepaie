@@ -1,13 +1,16 @@
 package com.gp.domain;
 
-// Generated 14 sept. 2014 16:09:18 by Hibernate Tools 3.4.0.CR1
+// Generated 19 sept. 2014 17:14:43 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -31,6 +34,12 @@ public class Exercice implements java.io.Serializable {
 	public Exercice() {
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.societe.getIntituleSociete()+": "+this.intituleExercice+"\n"+
+				"du : "+this.dateDebut+" au "+this.dateFin;
+	}
 	public Exercice(String intituleExercice, Date dateDebut, Date dateFin) {
 		this.intituleExercice = intituleExercice;
 		this.dateDebut = dateDebut;

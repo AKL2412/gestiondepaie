@@ -4,11 +4,14 @@ package com.gp.domain;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -26,6 +29,12 @@ public class Affectation implements java.io.Serializable {
 	private Set<Poste> postes = new HashSet<Poste>(0);
 
 	public Affectation() {
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Affectation :-----------------------\n"+
+				"Département : "+this.departement+"\n Service : "+this.service+"\n-----------------------------------\n";
 	}
 
 	public Affectation(String departement, String service, Set<Poste> postes) {

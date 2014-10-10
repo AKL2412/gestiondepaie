@@ -22,12 +22,29 @@
 											<i class="fi-list"></i>	Lister
 											</a>
 										</li>
-										
-										<li class=" <c:if test="${link == \"societe\" && action == \"modifier\"}"> active </c:if>" >
-											<a href="<c:url value="/admin/gerer-societes/modifier"/>">
+										 <c:if test="${link == \"societe\" && action == \"modifier\"}"> 
+										<li class="active" >
+											<a >
 											<i class="fi-pencil"></i>
-											Modifier</a> 
+											Modifier
+											</a> 
 										</li>
+										 </c:if>
+										  <c:if test="${link == \"societe\" && action == \"excercice\"}"> 
+										<li class="active" >
+											<a >
+											<i class="fi-folder"></i>
+											Exercices
+											</a> 
+										</li>
+										 </c:if>
+										 <c:if test="${link == \"societe\" && action == \"consulter\"}"> 
+										<li class=" active " >
+											<a>
+											<i class="fi-eye"></i>
+											Consultation</a> 
+										</li>
+										</c:if>
 									</ul>
 								</li>
 								<li class="<c:if test="${link == \"bareme\"}"> active </c:if>">
@@ -54,12 +71,12 @@
 									</a>
 								</li>
 								<li class="<c:if test="${link == \"compte\"}"> active </c:if>">
-									<a href="<c:url value="/gerer-mon-compte" />" id="about-link" class="skel-layers-ignoreHref">
+									<a href="<c:url value="/admin/gerer-mon-compte" />" id="about-link" class="skel-layers-ignoreHref">
 									<i class="fi-torso"></i>		Mon compte
 									</a>
 									<ul>
 										<li class=" <c:if test="${link == \"compte\" && action == \"modifier\"}"> active </c:if>" >
-										<a href="<c:url value="/gerer-mon-compte/modifier"/> ">Modifier</a></li>
+										<a href="<c:url value="/admin/gerer-mon-compte/modifier"/> ">Modifier</a></li>
 										<li><a href="<c:url value="/logout_user"/>">déconnecter</a></li>
 									</ul>
 								</li>

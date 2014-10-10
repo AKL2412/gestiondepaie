@@ -4,11 +4,14 @@ package com.gp.domain;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -28,7 +31,13 @@ public class Paie implements java.io.Serializable {
 
 	public Paie() {
 	}
-
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "La paie : ----------------\n"+
+				"Mode de payement : "+this.modepayement+"\nSalaire brute : "+this.salairebrute+
+				"\n salaire de base : "+this.salairedebase+"\n-----------------------------------\n";
+	}
 	public Paie(String modepayement, Float salairebrute, Float salairedebase,
 			Set<Salarie> salaries) {
 		this.modepayement = modepayement;

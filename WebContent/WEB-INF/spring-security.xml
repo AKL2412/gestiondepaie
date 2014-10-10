@@ -12,8 +12,9 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 <security:global-method-security jsr250-annotations="enabled"/>
 <security:http disable-url-rewriting="true">
 	<security:access-denied-handler error-page="/denied"/>
-	<security:intercept-url pattern="/" access="ROLE_ADMIN,ROLE_USER"/>
-	<security:intercept-url pattern="/admin/*" access="ROLE_ADMIN"/>
+	<security:intercept-url pattern="/" access="ROLE_ADMIN,ROLE_USER,ROLE_SOCIETE"/>
+	<security:intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
+	<security:intercept-url pattern="/societe/**" access="ROLE_ADMIN,ROLE_USER,ROLE_SOCIETE"/>
 	<security:form-login
 		login-page="/authentification" 
 		default-target-url="/"

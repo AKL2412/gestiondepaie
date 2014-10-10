@@ -8,6 +8,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Fichier {
 
+	public static boolean creerDossier(String cheminSauvegarde){
+		File dir = new File(cheminSauvegarde);
+        if (!dir.exists()) dir.mkdirs();
+		return true;
+	}
 	public static String uploder(MultipartFile file,String nomFichierSurServeur,String cheminSauvegarde){
 		
 		if (!file.isEmpty()) {
@@ -21,13 +26,16 @@ public class Fichier {
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
                 stream.write(bytes);
                 stream.close();
-                return "Fichier sauvegardé";
+                return nomFichierSurServeur;
             } catch (Exception e) {
-               return e.getMessage();
+            	System.out.println(e.getMessage());
+              
             }
 		}
-		return "Aucun fichier sélectionné !!";
+		return "ERROR";
 	}
+	
+
 	private static String extension(String name){
 		String r = "";
 		for(int i = name.length() -1 ; i >= 0 ; i--){
