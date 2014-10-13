@@ -1,6 +1,6 @@
 package com.gp.domainnews;
 
-// Generated 26 sept. 2014 14:49:21 by Hibernate Tools 3.4.0.CR1
+// Generated 11 oct. 2014 11:17:51 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -38,6 +38,7 @@ public class Societe implements java.io.Serializable {
 	private Date dateajout;
 	private String logo;
 	private String slug;
+	private String ville;
 	private Set<Salarie> salaries = new HashSet<Salarie>(0);
 	private Set<Utilisateur> utilisateurs = new HashSet<Utilisateur>(0);
 	private Set<Exercice> exercices = new HashSet<Exercice>(0);
@@ -49,7 +50,7 @@ public class Societe implements java.io.Serializable {
 	public Societe(String intituleSociete, String patente, String idfiscale,
 			String rcCodeTribunal, String cnss, String cimr, String telephone,
 			String fax, String email, String adresse, String mutuelle,
-			Date dateajout, String logo, String slug) {
+			Date dateajout, String logo, String slug, String ville) {
 		this.intituleSociete = intituleSociete;
 		this.patente = patente;
 		this.idfiscale = idfiscale;
@@ -64,14 +65,15 @@ public class Societe implements java.io.Serializable {
 		this.dateajout = dateajout;
 		this.logo = logo;
 		this.slug = slug;
+		this.ville = ville;
 	}
 
 	public Societe(String intituleSociete, String patente, String idfiscale,
 			String rcCodeTribunal, String cnss, String cimr, String telephone,
 			String fax, String email, String adresse, String mutuelle,
-			Date dateajout, String logo, String slug, Set<Salarie> salaries,
-			Set<Utilisateur> utilisateurs, Set<Exercice> exercices,
-			Set<Societebareme> societebaremes) {
+			Date dateajout, String logo, String slug, String ville,
+			Set<Salarie> salaries, Set<Utilisateur> utilisateurs,
+			Set<Exercice> exercices, Set<Societebareme> societebaremes) {
 		this.intituleSociete = intituleSociete;
 		this.patente = patente;
 		this.idfiscale = idfiscale;
@@ -86,6 +88,7 @@ public class Societe implements java.io.Serializable {
 		this.dateajout = dateajout;
 		this.logo = logo;
 		this.slug = slug;
+		this.ville = ville;
 		this.salaries = salaries;
 		this.utilisateurs = utilisateurs;
 		this.exercices = exercices;
@@ -228,6 +231,15 @@ public class Societe implements java.io.Serializable {
 
 	public void setSlug(String slug) {
 		this.slug = slug;
+	}
+
+	@Column(name = "ville", nullable = false)
+	public String getVille() {
+		return this.ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "societe")

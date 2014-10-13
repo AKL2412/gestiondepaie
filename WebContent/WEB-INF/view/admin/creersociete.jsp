@@ -32,17 +32,21 @@
 	<input type="text" required="required" placeholder="CNSS de la société" name="cnss"/>
 </div>
 
-<div class="input c3">
+<div class="input c4">
 	<label>Code Tribunal : </label>
 	<input type="text" required="required" placeholder="RC + Code Tribunal de la société" name="rcCodeTribunal"/>
 </div>
-<div class="input c3">
+<div class="input c4">
 	<label>FAX : </label>
 	<input type="text" placeholder="Le fax de la société" name="fax"/>
 </div>
-<div class="input c3">
+<div class="input c4">
 	<label>Email : </label>
 	<input type="text" required="required" placeholder="Adresse email de la société" name="email"/>
+</div>
+<div class="input c4">
+	<label>Ville : </label>
+	<input type="text" required="required" placeholder="ville de la société" name="ville"/>
 </div>
 <div class="input c4">
 	<label>Téléphone : </label>

@@ -1,6 +1,6 @@
 package com.gp.domainnews;
 
-// Generated 26 sept. 2014 14:49:21 by Hibernate Tools 3.4.0.CR1
+// Generated 11 oct. 2014 11:17:51 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -27,22 +27,26 @@ public class Exercice implements java.io.Serializable {
 	private String intituleExercice;
 	private Date dateDebut;
 	private Date dateFin;
+	private boolean encours;
 
 	public Exercice() {
 	}
 
-	public Exercice(String intituleExercice, Date dateDebut, Date dateFin) {
+	public Exercice(String intituleExercice, Date dateDebut, Date dateFin,
+			boolean encours) {
 		this.intituleExercice = intituleExercice;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
+		this.encours = encours;
 	}
 
 	public Exercice(Societe societe, String intituleExercice, Date dateDebut,
-			Date dateFin) {
+			Date dateFin, boolean encours) {
 		this.societe = societe;
 		this.intituleExercice = intituleExercice;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
+		this.encours = encours;
 	}
 
 	@Id
@@ -93,6 +97,15 @@ public class Exercice implements java.io.Serializable {
 
 	public void setDateFin(Date dateFin) {
 		this.dateFin = dateFin;
+	}
+
+	@Column(name = "encours", nullable = false)
+	public boolean isEncours() {
+		return this.encours;
+	}
+
+	public void setEncours(boolean encours) {
+		this.encours = encours;
 	}
 
 }

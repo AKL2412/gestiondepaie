@@ -1,6 +1,6 @@
 package com.gp.domainnews;
 
-// Generated 26 sept. 2014 14:49:21 by Hibernate Tools 3.4.0.CR1
+// Generated 11 oct. 2014 11:17:51 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -40,9 +40,8 @@ public class Salarie implements java.io.Serializable {
 	public Salarie() {
 	}
 
-	public Salarie(String dossier, String image) {
+	public Salarie(String dossier) {
 		this.dossier = dossier;
-		this.image = image;
 	}
 
 	public Salarie(Contrat contrat, Etatcivile etatcivile, Paie paie,
@@ -155,7 +154,7 @@ public class Salarie implements java.io.Serializable {
 		this.dossier = dossier;
 	}
 
-	@Column(name = "image", nullable = false)
+	@Column(name = "image")
 	public String getImage() {
 		return this.image;
 	}
