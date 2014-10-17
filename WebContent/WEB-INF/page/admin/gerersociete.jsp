@@ -12,11 +12,14 @@
 </c:if>
 </c:if>
 
-<jsp:include page="/WEB-INF/layout/layout.jsp">
+<jsp:include page="/WEB-INF/layout/gp-layout.jsp">
 	<jsp:param name="title" value="${title}"/>
 	<jsp:param name="content" value="${cont }"/>
 	
 	<jsp:param name="menu" value="admin"/>
 	<jsp:param name="menuRight" value="admin/gerersociete"/>
 </jsp:include>
+
+
+
 
