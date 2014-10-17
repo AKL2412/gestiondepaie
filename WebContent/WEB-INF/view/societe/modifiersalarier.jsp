@@ -192,6 +192,7 @@ action="" method="post">
 <!-- 	<input type="number" placeholder="salaire de base du salarié" name="salairedebase"/> -->
 <!-- </div> -->
 </fieldset>
+<<<<<<< HEAD
 <br>
 <div class="panel-footer">
 <div class="submit">
@@ -202,6 +203,19 @@ action="" method="post">
 
 </form>
 	 </div>
+=======
+
+</div>
+<div class="panel-footer">
+ 
+<input type="submit" class="btn btn-primary" value="Enregistrer" />
+<input type="reset" class="btn btn-danger" value="annuler" />
+
+</div>
+
+</form>
+	 
+>>>>>>> n-theme
 </div>
 	</c:when>
 	<c:otherwise>

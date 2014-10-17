@@ -32,6 +32,7 @@
 	<input type="text" required="required" placeholder="CNSS de la société" name="cnss"/>
 </div>
 
+<<<<<<< HEAD
 <div class="input c3">
 	<label>Code Tribunal : </label>
 	<input type="text" required="required" placeholder="RC + Code Tribunal de la société" name="rcCodeTribunal"/>
@@ -41,10 +42,28 @@
 	<input type="text" placeholder="Le fax de la société" name="fax"/>
 </div>
 <div class="input c3">
+=======
+<div class="input c4">
+	<label>Code Tribunal : </label>
+	<input type="text" required="required" placeholder="RC + Code Tribunal de la société" name="rcCodeTribunal"/>
+</div>
+<div class="input c4">
+	<label>FAX : </label>
+	<input type="text" placeholder="Le fax de la société" name="fax"/>
+</div>
+<div class="input c4">
+>>>>>>> n-theme
 	<label>Email : </label>
 	<input type="text" required="required" placeholder="Adresse email de la société" name="email"/>
 </div>
 <div class="input c4">
+<<<<<<< HEAD
+=======
+	<label>Ville : </label>
+	<input type="text" required="required" placeholder="ville de la société" name="ville"/>
+</div>
+<div class="input c4">
+>>>>>>> n-theme
 	<label>Téléphone : </label>
 	<input type="text" required="required" placeholder="N°telephonex de la société" name="telephone"/>
 </div>

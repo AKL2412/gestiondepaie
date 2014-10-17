@@ -1,6 +1,10 @@
 package com.gp.domainnews;
 
+<<<<<<< HEAD
 // Generated 26 sept. 2014 14:49:21 by Hibernate Tools 3.4.0.CR1
+=======
+// Generated 13 oct. 2014 17:42:27 by Hibernate Tools 3.4.0.CR1
+>>>>>>> n-theme
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -27,10 +31,15 @@ public class Exercice implements java.io.Serializable {
 	private String intituleExercice;
 	private Date dateDebut;
 	private Date dateFin;
+<<<<<<< HEAD
+=======
+	private boolean encours;
+>>>>>>> n-theme
 
 	public Exercice() {
 	}
 
+<<<<<<< HEAD
 	public Exercice(String intituleExercice, Date dateDebut, Date dateFin) {
 		this.intituleExercice = intituleExercice;
 		this.dateDebut = dateDebut;
@@ -39,10 +48,26 @@ public class Exercice implements java.io.Serializable {
 
 	public Exercice(Societe societe, String intituleExercice, Date dateDebut,
 			Date dateFin) {
+=======
+	public Exercice(String intituleExercice, Date dateDebut, Date dateFin,
+			boolean encours) {
+		this.intituleExercice = intituleExercice;
+		this.dateDebut = dateDebut;
+		this.dateFin = dateFin;
+		this.encours = encours;
+	}
+
+	public Exercice(Societe societe, String intituleExercice, Date dateDebut,
+			Date dateFin, boolean encours) {
+>>>>>>> n-theme
 		this.societe = societe;
 		this.intituleExercice = intituleExercice;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
+<<<<<<< HEAD
+=======
+		this.encours = encours;
+>>>>>>> n-theme
 	}
 
 	@Id
@@ -95,4 +120,16 @@ public class Exercice implements java.io.Serializable {
 		this.dateFin = dateFin;
 	}
 
+<<<<<<< HEAD
+=======
+	@Column(name = "encours", nullable = false)
+	public boolean isEncours() {
+		return this.encours;
+	}
+
+	public void setEncours(boolean encours) {
+		this.encours = encours;
+	}
+
+>>>>>>> n-theme
 }

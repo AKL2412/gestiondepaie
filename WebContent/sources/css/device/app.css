@@ -11,6 +11,14 @@ body {
   background-color: #ffffff;
 }
 /* line 9, ../projet/sass/app.scss */
+body .gp-menu-right-box-shadow {
+  -moz-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #rgba 0, 0, 0, 0.2;
+  padding-bottom: 10px;
+}
+/* line 14, ../projet/sass/app.scss */
 body #contenu-top {
   position: fixed;
   width: 100%;
@@ -22,7 +30,7 @@ body #contenu-top {
   border-bottom: 1px solid #000;
   display: none;
 }
-/* line 19, ../projet/sass/app.scss */
+/* line 24, ../projet/sass/app.scss */
 body #contenu-top #link-selected a {
   display: inline-block;
   text-decoration: none;
@@ -31,11 +39,11 @@ body #contenu-top #link-selected a {
   margin: 1px 0px;
   padding: 0px 4px;
 }
-/* line 26, ../projet/sass/app.scss */
+/* line 31, ../projet/sass/app.scss */
 body #contenu-top #link-selected a i {
   margin-right: 5px;
 }
-/* line 29, ../projet/sass/app.scss */
+/* line 34, ../projet/sass/app.scss */
 body #contenu-top #link-selected a:after {
   content: '';
   border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
@@ -55,18 +63,18 @@ body #contenu-top #link-selected a:after {
   border-radius: 0px;
   cursor: default;
 }
-/* line 47, ../projet/sass/app.scss */
+/* line 52, ../projet/sass/app.scss */
 body #contenu-top #link-selected a:last-child {
   color: #000;
   font-weight: bolder;
   padding: 0px 0px 0 4px;
 }
-/* line 52, ../projet/sass/app.scss */
+/* line 57, ../projet/sass/app.scss */
 body #contenu-top #link-selected a:last-child:after {
   content: '';
   border-width: 0px;
 }
-/* line 60, ../projet/sass/app.scss */
+/* line 65, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top {
   width: 100%;
   height: 30px;
@@ -81,7 +89,7 @@ body #contenu-top .gp-menu-top {
   background-image: linear-gradient(to bottom, #fcfff4 0%, #d9ddcc 100%);
   border-bottom: 1px solid #eee;
 }
-/* line 68, ../projet/sass/app.scss */
+/* line 73, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget {
   float: left;
   display: inline-block;
@@ -90,13 +98,13 @@ body #contenu-top .gp-menu-top .gp-widget {
   padding: 0 8px;
   display: none;
 }
-/* line 75, ../projet/sass/app.scss */
+/* line 80, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget i.fi-list {
   font-size: 30px;
   opacity: 0.6;
   cursor: pointer;
 }
-/* line 80, ../projet/sass/app.scss */
+/* line 85, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget i.fi-list:after {
   content: '';
   border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
@@ -116,55 +124,55 @@ body #contenu-top .gp-menu-top .gp-widget i.fi-list:after {
   border-radius: 0px;
   cursor: default;
 }
-/* line 98, ../projet/sass/app.scss */
+/* line 103, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget .top-menu {
   position: absolute;
   z-index: 2;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
-/* line 103, ../projet/sass/app.scss */
+/* line 108, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget .top-menu .menu {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
-/* line 105, ../projet/sass/app.scss */
+/* line 110, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget .top-menu .menu li {
   font-size: 1.1em;
   display: block;
   height: 20px;
   padding: 4px 6px;
 }
-/* line 111, ../projet/sass/app.scss */
+/* line 116, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget .top-menu .menu li a {
   display: block;
   height: 20px;
   width: 100%;
   text-decoration: none;
 }
-/* line 117, ../projet/sass/app.scss */
+/* line 122, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .gp-widget .top-menu .menu li ul {
   display: none;
 }
-/* line 128, ../projet/sass/app.scss */
+/* line 133, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .sous-menu-top {
   display: none;
   margin-left: 2%;
 }
-/* line 131, ../projet/sass/app.scss */
+/* line 136, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .sous-menu-top ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 134, ../projet/sass/app.scss */
+/* line 139, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .sous-menu-top ul li {
   display: inline-block;
   margin: 0 5px;
   height: 30px;
 }
-/* line 138, ../projet/sass/app.scss */
+/* line 143, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .sous-menu-top ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
@@ -175,7 +183,7 @@ body #contenu-top .gp-menu-top .sous-menu-top ul li a {
   padding: 0 7px;
   line-height: 20px;
 }
-/* line 152, ../projet/sass/app.scss */
+/* line 157, ../projet/sass/app.scss */
 body #contenu-top .gp-menu-top .sous-menu-top ul li.active a {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -191,63 +199,82 @@ body #contenu-top .gp-menu-top .sous-menu-top ul li.active a {
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 170, ../projet/sass/app.scss */
+/* line 175, ../projet/sass/app.scss */
 body .gp-menu-right-main-content {
   width: 100%;
   min-height: 200px;
 }
-/* line 174, ../projet/sass/app.scss */
+/* line 179, ../projet/sass/app.scss */
 body .gp-menu-right-main-content .gp-menu-right {
-  width: 15%;
-  min-height: 200px;
-  height: 100%;
-  display: inline-block;
-  vertical-align: top;
-  border-right: 1px solid #ccc;
-  float: left;
-  z-index: 30;
+  height: 75px;
+  padding-top: 30px;
   position: fixed;
-  padding-top: 2%;
-  background: url(/GestPaie/sources/img/overlay.png);
-}
-/* line 189, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu {
-  padding: 0;
-  margin: 0;
+  width: 100%;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: #f9f9f9;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  border-bottom: 2px solid #ccc;
 }
 /* line 190, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li {
-  width: 100%;
-  font-size: 1.1em;
-  display: inline-block;
-  height: 30px;
-  padding: 0px;
+body .gp-menu-right-main-content .gp-menu-right .menu {
+  text-align: center;
 }
-/* line 196, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li:hover {
-  background-color: #f1f1f1;
+/* line 192, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .logo {
+  position: absolute;
+  left: 0;
+  height: 75px;
+  width: 150px;
+  margin-top: -30px;
 }
 /* line 199, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li a {
-  display: block;
+body .gp-menu-right-main-content .gp-menu-right .menu .logo img {
+  height: 75px;
+}
+/* line 205, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien {
+  display: inline-block;
   height: 30px;
-  width: 94%;
+  padding: 5px 5px;
+  margin: 8px;
+  border-bottom: 3px solid #f9f9f9;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 215, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien a {
+  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: bolder;
-  padding-left: 6%;
-  line-height: 30px;
 }
-/* line 208, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li a i {
-  margin-left: 10px;
+/* line 219, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien:hover {
+  border-bottom: 3px solid #59a7cc;
 }
-/* line 212, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li ul {
+/* line 221, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien:hover ul {
+  display: block;
+}
+/* line 226, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien ul {
   padding: 0;
   margin: 0;
-  float: right;
+  list-style: none;
+  background-color: #f1f1f1;
+  display: block;
+  width: 100%;
+  margin-top: 6px;
   display: none;
+<<<<<<< HEAD
   width: 200px;
   margin-top: -30px;
   margin-right: -203px;
@@ -258,25 +285,38 @@ body .gp-menu-right-main-content .gp-menu-right .menu li ul {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+=======
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-/* line 228, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li:hover ul {
+/* line 235, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien ul li {
+  padding: 0px 20px;
+  text-transform: lowercase;
+  font-family: "Trebushet MS";
+  height: 30px;
+  border-bottom: 1px solid #ccc;
+  line-height: 30px;
+>>>>>>> n-theme
+}
+/* line 242, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien ul li a {
   display: block;
+  width: 100%;
+  height: 100%;
 }
-/* line 234, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li.active {
-  height: auto;
-  /*border-bottom: 2px solid #6fad66;*/
+/* line 247, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien ul li:hover {
+  background-color: #d6d6d6;
+  border-bottom: 1px solid #777;
 }
-/* line 237, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li.active:hover {
-  background-color: inherit;
+/* line 253, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien ul li.active a {
+  color: #59a7cc;
 }
-/* line 240, ../projet/sass/app.scss */
-body .gp-menu-right-main-content .gp-menu-right .menu li.active a {
-  /*background-color: #498ab2;*/
-  border-bottom: 2px solid #bf5b5b;
-}
+<<<<<<< HEAD
 /* line 247, ../projet/sass/app.scss */
 body .gp-menu-right-main-content .gp-menu-right .menu li.active ul {
   padding: 0;
@@ -319,49 +359,85 @@ body .gp-menu-right-main-content .gp-menu-right .menu li.active ul li.active a {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset, 0 -1px 1px rgba(0, 0, 0, 0.3) inset;
 }
 /* line 290, ../projet/sass/app.scss */
+=======
+/* line 259, ../projet/sass/app.scss */
+body .gp-menu-right-main-content .gp-menu-right .menu .gdp-lien.active {
+  border-bottom: 3px solid #59a7cc;
+}
+/* line 267, ../projet/sass/app.scss */
+>>>>>>> n-theme
 body .gp-menu-right-main-content .gp-main-content {
-  width: 81%;
+  width: 80%;
   background-color: white;
   min-height: 200px;
-  display: inline-block;
+  display: block;
   padding: 1% 2%;
+<<<<<<< HEAD
   margin-left: 15%;
   /*border:1px solid rgba(0,0,0,0.2);*/
 }
 /* line 298, ../projet/sass/app.scss */
+=======
+  margin: 80px auto;
+  position: relative;
+  /*border:1px solid rgba(0,0,0,0.2);*/
+}
+/* line 276, ../projet/sass/app.scss */
+>>>>>>> n-theme
 body .gp-menu-right-main-content .gp-main-content p {
   text-align: justify;
 }
 
 @media only screen {
+<<<<<<< HEAD
   /* line 308, ../projet/sass/app.scss */
+=======
+  /* line 292, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body {
     top: 0;
     left: 0;
     width: 100%;
   }
+<<<<<<< HEAD
   /* line 312, ../projet/sass/app.scss */
+=======
+  /* line 296, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .onlysmall {
     display: none;
   }
 }
 @media only screen and (min-width: 64.063em) {
+<<<<<<< HEAD
   /* line 320, ../projet/sass/app.scss */
   #body {
     width: 100%;
   }
   /* line 322, ../projet/sass/app.scss */
+=======
+  /* line 304, ../projet/sass/app.scss */
+  #body {
+    width: 100%;
+  }
+  /* line 306, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .onlysmall {
     display: none;
   }
 }
 @media only screen and (max-width: 49em) {
+<<<<<<< HEAD
   /* line 331, ../projet/sass/app.scss */
+=======
+  /* line 315, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body {
     top: 0;
     left: 0;
     width: 100%;
   }
+<<<<<<< HEAD
   /* line 335, ../projet/sass/app.scss */
   #body .onlylarge {
     display: none;
@@ -387,23 +463,62 @@ body .gp-menu-right-main-content .gp-main-content p {
     display: none;
   }
   /* line 354, ../projet/sass/app.scss */
+=======
+  /* line 319, ../projet/sass/app.scss */
+  #body .onlylarge {
+    display: none;
+  }
+  /* line 322, ../projet/sass/app.scss */
+  #body #contenu-top {
+    display: block;
+  }
+  /* line 325, ../projet/sass/app.scss */
+  #body #contenu-top .gp-menu-top .gp-widget {
+    display: inline-block;
+  }
+  /* line 328, ../projet/sass/app.scss */
+  #body #contenu-top .gp-menu-top .sous-menu-top {
+    display: inline-block;
+  }
+  /* line 333, ../projet/sass/app.scss */
+  #body .gp-menu-right-main-content {
+    margin-top: 53px;
+  }
+  /* line 335, ../projet/sass/app.scss */
+  #body .gp-menu-right-main-content .gp-menu-right {
+    display: none;
+  }
+  /* line 338, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .gp-menu-right-main-content .gp-main-content {
     width: 96%;
     margin-left: 0%;
   }
+<<<<<<< HEAD
   /* line 361, ../projet/sass/app.scss */
+=======
+  /* line 345, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body form.form-bloc {
     width: 100%;
     margin-left: 0%;
   }
+<<<<<<< HEAD
   /* line 365, ../projet/sass/app.scss */
+=======
+  /* line 349, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body div.c1, #body div.c2, #body div.c3, #body div.c4,
   #body div.s1, #body div.s2, #body div.s3, #body div.s4 {
     width: 94%;
     margin-left: 2%;
     padding: 0;
   }
+<<<<<<< HEAD
   /* line 374, ../projet/sass/app.scss */
+=======
+  /* line 358, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe {
     border: 1px solid #dddddd;
     width: 100%;
@@ -413,7 +528,11 @@ body .gp-menu-right-main-content .gp-main-content p {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
+<<<<<<< HEAD
   /* line 380, ../projet/sass/app.scss */
+=======
+  /* line 364, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .icon {
     display: block;
     width: 100%;
@@ -428,7 +547,11 @@ body .gp-menu-right-main-content .gp-main-content p {
     background-image: -webkit-linear-gradient(top, #356aa0 0%, #356aa0 100%);
     background-image: linear-gradient(to bottom, #356aa0 0%, #356aa0 100%);
   }
+<<<<<<< HEAD
   /* line 388, ../projet/sass/app.scss */
+=======
+  /* line 372, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .icon .nom {
     text-align: center;
     text-transform: uppercase;
@@ -438,44 +561,76 @@ body .gp-menu-right-main-content .gp-main-content p {
     color: #ffffff;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.8);
   }
+<<<<<<< HEAD
   /* line 398, ../projet/sass/app.scss */
+=======
+  /* line 382, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .icon .image {
     width: 100%;
     line-height: 250px;
   }
+<<<<<<< HEAD
   /* line 401, ../projet/sass/app.scss */
+=======
+  /* line 385, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .icon .image img {
     width: 100%;
     display: inline-block;
     height: 100%;
   }
+<<<<<<< HEAD
   /* line 407, ../projet/sass/app.scss */
   #body .consultation-societe .icon .lien {
     padding-top: 20px;
   }
   /* line 409, ../projet/sass/app.scss */
+=======
+  /* line 391, ../projet/sass/app.scss */
+  #body .consultation-societe .icon .lien {
+    padding-top: 20px;
+  }
+  /* line 393, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .icon .lien a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
     display: inline-block;
     margin: 2px;
   }
+<<<<<<< HEAD
   /* line 414, ../projet/sass/app.scss */
+=======
+  /* line 398, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .icon .lien a:hover {
     text-decoration: underline;
     color: #ffffff;
   }
+<<<<<<< HEAD
   /* line 419, ../projet/sass/app.scss */
   #body .consultation-societe .icon .lien a.active {
     color: #000;
   }
   /* line 424, ../projet/sass/app.scss */
+=======
+  /* line 403, ../projet/sass/app.scss */
+  #body .consultation-societe .icon .lien a.active {
+    color: #000;
+  }
+  /* line 408, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body .consultation-societe .detail {
     display: block;
     width: 100%;
     height: auto;
   }
+<<<<<<< HEAD
   /* line 433, ../projet/sass/app.scss */
+=======
+  /* line 417, ../projet/sass/app.scss */
+>>>>>>> n-theme
   #body #alert-box .alert-main {
     width: 80%;
   }
@@ -483,7 +638,11 @@ body .gp-menu-right-main-content .gp-main-content p {
 /*
 	STANDARD STYLE 
 */
+<<<<<<< HEAD
 /* line 444, ../projet/sass/app.scss */
+=======
+/* line 428, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #alert-box {
   position: fixed;
   top: 0;
@@ -492,7 +651,11 @@ body .gp-menu-right-main-content .gp-main-content p {
   height: 100%;
   z-index: 70;
 }
+<<<<<<< HEAD
 /* line 451, ../projet/sass/app.scss */
+=======
+/* line 435, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #alert-box .bg {
   position: fixed;
   top: 0;
@@ -502,7 +665,11 @@ body .gp-menu-right-main-content .gp-main-content p {
   background-color: #000;
   opacity: 0.5;
 }
+<<<<<<< HEAD
 /* line 459, ../projet/sass/app.scss */
+=======
+/* line 443, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #alert-box .bg i {
   color: #ffffff;
   float: right;
@@ -510,7 +677,11 @@ body .gp-menu-right-main-content .gp-main-content p {
   margin-top: 10px;
   cursor: pointer;
 }
+<<<<<<< HEAD
 /* line 467, ../projet/sass/app.scss */
+=======
+/* line 451, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #alert-box .alert-main {
   width: 50%;
   height: 70%;
@@ -524,7 +695,11 @@ body .gp-menu-right-main-content .gp-main-content p {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+<<<<<<< HEAD
 /* line 477, ../projet/sass/app.scss */
+=======
+/* line 461, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #alert-box .alert-main .loding-image {
   display: block;
   position: relative;
@@ -532,18 +707,30 @@ body .gp-menu-right-main-content .gp-main-content p {
   height: 15px;
 }
 
+<<<<<<< HEAD
 /* line 487, ../projet/sass/app.scss */
+=======
+/* line 471, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #authentification {
   width: 400px;
   margin: 10% auto;
 }
 
+<<<<<<< HEAD
 /* line 495, ../projet/sass/app.scss */
+=======
+/* line 479, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .input label {
   display: block;
   color: rgba(0, 0, 0, 0.6);
 }
+<<<<<<< HEAD
 /* line 499, ../projet/sass/app.scss */
+=======
+/* line 483, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .input input[type="text"],
 .input input[type="number"],
 .input input[type="date"],
@@ -557,7 +744,11 @@ body .gp-menu-right-main-content .gp-main-content p {
   outline: none;
   padding-left: 2%;
 }
+<<<<<<< HEAD
 /* line 512, ../projet/sass/app.scss */
+=======
+/* line 496, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .input input[type="text"]:focus,
 .input input[type="number"]:focus,
 .input input[type="date"]:focus,
@@ -566,6 +757,7 @@ body .gp-menu-right-main-content .gp-main-content p {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
 }
 
 /* line 517, ../projet/sass/app.scss */
@@ -611,6 +803,53 @@ div.c4 {
 }
 
 /* line 547, ../projet/sass/app.scss */
+=======
+}
+
+/* line 501, ../projet/sass/app.scss */
+div {
+  vertical-align: top;
+}
+
+/* line 504, ../projet/sass/app.scss */
+div.submit {
+  text-align: center;
+}
+
+/* line 507, ../projet/sass/app.scss */
+div.c1 {
+  width: 95%;
+  margin-left: 1%;
+  padding: 0;
+  display: inline-block;
+}
+
+/* line 513, ../projet/sass/app.scss */
+div.c2 {
+  width: 47%;
+  margin: 1%;
+  display: inline-block;
+  padding: 0;
+}
+
+/* line 519, ../projet/sass/app.scss */
+div.c3 {
+  width: 30.8%;
+  margin: 1%;
+  display: inline-block;
+  padding: 0;
+}
+
+/* line 525, ../projet/sass/app.scss */
+div.c4 {
+  width: 22.5%;
+  margin: 1%;
+  display: inline-block;
+  padding: 0;
+}
+
+/* line 531, ../projet/sass/app.scss */
+>>>>>>> n-theme
 div.s3 {
   width: 65.2%;
   margin: 1%;
@@ -618,7 +857,11 @@ div.s3 {
   padding: 0;
 }
 
+<<<<<<< HEAD
 /* line 553, ../projet/sass/app.scss */
+=======
+/* line 537, ../projet/sass/app.scss */
+>>>>>>> n-theme
 form.form-bloc {
   border: 1px solid #dddddd;
   padding: 0;
@@ -626,7 +869,11 @@ form.form-bloc {
   margin-left: 10%;
   background-color: #f9f9f9;
 }
+<<<<<<< HEAD
 /* line 559, ../projet/sass/app.scss */
+=======
+/* line 543, ../projet/sass/app.scss */
+>>>>>>> n-theme
 form.form-bloc .titre {
   display: block;
   width: 100%;
@@ -648,7 +895,11 @@ form.form-bloc .titre {
   background-image: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
 }
 
+<<<<<<< HEAD
 /* line 578, ../projet/sass/app.scss */
+=======
+/* line 562, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .societe {
   display: block;
   height: 40px;
@@ -656,6 +907,7 @@ form.form-bloc .titre {
   color: rgba(0, 0, 0, 0.7);
   background-color: #f1f1f1;
 }
+<<<<<<< HEAD
 /* line 584, ../projet/sass/app.scss */
 .societe .logo {
   width: 40px;
@@ -671,11 +923,32 @@ form.form-bloc .titre {
 /* line 595, ../projet/sass/app.scss */
 .societe .nom {
   display: inline-block;
+=======
+/* line 568, ../projet/sass/app.scss */
+.societe .logo {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 574, ../projet/sass/app.scss */
+.societe .logo img {
+  width: 100%;
+  height: 100%;
+}
+/* line 579, ../projet/sass/app.scss */
+.societe .nom {
+  display: inline-block;
+>>>>>>> n-theme
   height: 40px;
   line-height: 40px;
 }
 
+<<<<<<< HEAD
 /* line 603, ../projet/sass/app.scss */
+=======
+/* line 587, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe {
   border: 1px solid #dddddd;
   height: 400px;
@@ -686,7 +959,11 @@ form.form-bloc .titre {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+<<<<<<< HEAD
 /* line 611, ../projet/sass/app.scss */
+=======
+/* line 595, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon {
   width: 30%;
   height: 400px;
@@ -703,7 +980,11 @@ form.form-bloc .titre {
   background-image: -webkit-linear-gradient(top, #356aa0 0%, #356aa0 100%);
   background-image: linear-gradient(to bottom, #356aa0 0%, #356aa0 100%);
 }
+<<<<<<< HEAD
 /* line 622, ../projet/sass/app.scss */
+=======
+/* line 606, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon .nom {
   text-align: center;
   text-transform: uppercase;
@@ -713,34 +994,58 @@ form.form-bloc .titre {
   color: #ffffff;
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.8);
 }
+<<<<<<< HEAD
 /* line 632, ../projet/sass/app.scss */
+=======
+/* line 616, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon .image {
   width: 100%;
   height: 250px;
   line-height: 250px;
 }
+<<<<<<< HEAD
 /* line 636, ../projet/sass/app.scss */
+=======
+/* line 620, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon .image img {
   width: 100%;
   display: inline-block;
 }
+<<<<<<< HEAD
 /* line 641, ../projet/sass/app.scss */
 .consultation-societe .icon .lien {
   padding-top: 20px;
 }
 /* line 643, ../projet/sass/app.scss */
+=======
+/* line 625, ../projet/sass/app.scss */
+.consultation-societe .icon .lien {
+  padding-top: 20px;
+}
+/* line 627, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon .lien a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   margin: 2px;
 }
+<<<<<<< HEAD
 /* line 648, ../projet/sass/app.scss */
+=======
+/* line 632, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon .lien a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
+<<<<<<< HEAD
 /* line 653, ../projet/sass/app.scss */
+=======
+/* line 637, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .icon .lien a.active {
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -759,35 +1064,59 @@ form.form-bloc .titre {
   font-weight: bolder;
   padding: 0 4px;
 }
+<<<<<<< HEAD
 /* line 663, ../projet/sass/app.scss */
 .consultation-societe .icon .lien a.active:hover {
   text-decoration: none;
 }
 /* line 669, ../projet/sass/app.scss */
+=======
+/* line 647, ../projet/sass/app.scss */
+.consultation-societe .icon .lien a.active:hover {
+  text-decoration: none;
+}
+/* line 653, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .detail {
   display: inline-block;
   width: 68%;
   height: 100%;
   overflow: auto;
 }
+<<<<<<< HEAD
 /* line 674, ../projet/sass/app.scss */
+=======
+/* line 658, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .detail .add-exo {
   overflow: hidden;
   height: 30px;
   border-bottom: 3px solid #ccc;
   margin-bottom: 6px;
 }
+<<<<<<< HEAD
 /* line 679, ../projet/sass/app.scss */
+=======
+/* line 663, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .detail .add-exo .buttons {
   text-align: right;
   height: 30px;
 }
+<<<<<<< HEAD
 /* line 684, ../projet/sass/app.scss */
+=======
+/* line 668, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .consultation-societe .detail .les-exos {
   background-color: #ffffff;
 }
 
+<<<<<<< HEAD
 /* line 690, ../projet/sass/app.scss */
+=======
+/* line 674, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .message {
   background-color: #f7f7f9;
   border: 1px solid #444;
@@ -801,7 +1130,11 @@ form.form-bloc .titre {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+<<<<<<< HEAD
 /* line 698, ../projet/sass/app.scss */
+=======
+/* line 682, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .message i {
   color: #ccc;
   position: absolute;
@@ -809,7 +1142,11 @@ form.form-bloc .titre {
   margin-left: -10px;
 }
 
+<<<<<<< HEAD
 /* line 705, ../projet/sass/app.scss */
+=======
+/* line 689, ../projet/sass/app.scss */
+>>>>>>> n-theme
 #logoSociete {
   display: inline-block;
   width: 100%;
@@ -818,17 +1155,26 @@ form.form-bloc .titre {
 /*
 presentation employ├®
 */
+<<<<<<< HEAD
 /* line 712, ../projet/sass/app.scss */
+=======
+/* line 696, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .salarie-presentation {
   padding: 10px 0;
   padding-left: 5px;
 }
+<<<<<<< HEAD
 /* line 718, ../projet/sass/app.scss */
+=======
+/* line 702, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .salarie-presentation .image img {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
+<<<<<<< HEAD
 /* line 722, ../projet/sass/app.scss */
 .salarie-presentation div.sblock {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -842,6 +1188,21 @@ presentation employ├®
   text-align: right;
 }
 /* line 732, ../projet/sass/app.scss */
+=======
+/* line 706, ../projet/sass/app.scss */
+.salarie-presentation div.sblock {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 709, ../projet/sass/app.scss */
+.salarie-presentation div.block {
+  background-color: #ffffff;
+}
+/* line 710, ../projet/sass/app.scss */
+.salarie-presentation div.block .modifier-block {
+  text-align: right;
+}
+/* line 716, ../projet/sass/app.scss */
+>>>>>>> n-theme
 .salarie-presentation div.block .titre-bloc {
   height: 30px;
   line-height: 30px;

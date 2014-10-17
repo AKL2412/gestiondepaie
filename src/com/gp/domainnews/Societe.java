@@ -1,6 +1,10 @@
 package com.gp.domainnews;
 
+<<<<<<< HEAD
 // Generated 26 sept. 2014 14:49:21 by Hibernate Tools 3.4.0.CR1
+=======
+// Generated 13 oct. 2014 17:42:27 by Hibernate Tools 3.4.0.CR1
+>>>>>>> n-theme
 
 import java.util.Date;
 import java.util.HashSet;
@@ -38,6 +42,10 @@ public class Societe implements java.io.Serializable {
 	private Date dateajout;
 	private String logo;
 	private String slug;
+<<<<<<< HEAD
+=======
+	private String ville;
+>>>>>>> n-theme
 	private Set<Salarie> salaries = new HashSet<Salarie>(0);
 	private Set<Utilisateur> utilisateurs = new HashSet<Utilisateur>(0);
 	private Set<Exercice> exercices = new HashSet<Exercice>(0);
@@ -49,7 +57,11 @@ public class Societe implements java.io.Serializable {
 	public Societe(String intituleSociete, String patente, String idfiscale,
 			String rcCodeTribunal, String cnss, String cimr, String telephone,
 			String fax, String email, String adresse, String mutuelle,
+<<<<<<< HEAD
 			Date dateajout, String logo, String slug) {
+=======
+			Date dateajout, String logo, String slug, String ville) {
+>>>>>>> n-theme
 		this.intituleSociete = intituleSociete;
 		this.patente = patente;
 		this.idfiscale = idfiscale;
@@ -64,14 +76,24 @@ public class Societe implements java.io.Serializable {
 		this.dateajout = dateajout;
 		this.logo = logo;
 		this.slug = slug;
+<<<<<<< HEAD
+=======
+		this.ville = ville;
+>>>>>>> n-theme
 	}
 
 	public Societe(String intituleSociete, String patente, String idfiscale,
 			String rcCodeTribunal, String cnss, String cimr, String telephone,
 			String fax, String email, String adresse, String mutuelle,
+<<<<<<< HEAD
 			Date dateajout, String logo, String slug, Set<Salarie> salaries,
 			Set<Utilisateur> utilisateurs, Set<Exercice> exercices,
 			Set<Societebareme> societebaremes) {
+=======
+			Date dateajout, String logo, String slug, String ville,
+			Set<Salarie> salaries, Set<Utilisateur> utilisateurs,
+			Set<Exercice> exercices, Set<Societebareme> societebaremes) {
+>>>>>>> n-theme
 		this.intituleSociete = intituleSociete;
 		this.patente = patente;
 		this.idfiscale = idfiscale;
@@ -86,6 +108,10 @@ public class Societe implements java.io.Serializable {
 		this.dateajout = dateajout;
 		this.logo = logo;
 		this.slug = slug;
+<<<<<<< HEAD
+=======
+		this.ville = ville;
+>>>>>>> n-theme
 		this.salaries = salaries;
 		this.utilisateurs = utilisateurs;
 		this.exercices = exercices;
@@ -230,6 +256,18 @@ public class Societe implements java.io.Serializable {
 		this.slug = slug;
 	}
 
+<<<<<<< HEAD
+=======
+	@Column(name = "ville", nullable = false)
+	public String getVille() {
+		return this.ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+>>>>>>> n-theme
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "societe")
 	public Set<Salarie> getSalaries() {
 		return this.salaries;

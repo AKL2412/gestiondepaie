@@ -1,6 +1,10 @@
 package com.gp.domainnews;
 
+<<<<<<< HEAD:src/com/gp/domainnews/Affectation.java
 // Generated 26 sept. 2014 14:49:21 by Hibernate Tools 3.4.0.CR1
+=======
+// Generated 13 oct. 2014 17:42:27 by Hibernate Tools 3.4.0.CR1
+>>>>>>> n-theme:src/com/gp/domainnews/Affectation.java
 
 import java.util.HashSet;
 import java.util.Set;
