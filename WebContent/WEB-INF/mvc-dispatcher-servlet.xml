@@ -53,7 +53,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 		<value> com.gp.domain.Ordrevirement</value>
 		<value> com.gp.domain.Paie</value>
 		<value> com.gp.domain.Poste</value>
-		
+		<value> com.gp.domain.Tranche</value>
 		<value> com.gp.domain.Pret</value>
 		<value> com.gp.domain.Prime</value>
 		<value> com.gp.domain.Role</value>

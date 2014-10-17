@@ -56,6 +56,22 @@
 										<a href="<c:url value="/admin/gerer-baremes/creer"/>">
 										 Créer</a>
 										</li>
+										<c:if test="${link == \"bareme\" && action == \"tranche\"}"> 
+										<li class="active" >
+											<a >
+											
+											Ajout de tranche
+											</a> 
+										</li>
+										 </c:if>
+										<c:if test="${link == \"bareme\" && action == \"modifier\"}"> 
+										<li class="active" >
+											<a >
+											
+											Modifier
+											</a> 
+										</li>
+										 </c:if>
 										<li class="<c:if test="${ action==\"lister\" && link == \"bareme\"}"> active </c:if>">
 										<a href="<c:url value="/admin/gerer-baremes/consulter"/>">
 										

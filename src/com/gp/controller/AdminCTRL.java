@@ -19,9 +19,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.gp.domain.Bareme;
 import com.gp.domain.Exercice;
 import com.gp.domain.Role;
 import com.gp.domain.Societe;
+import com.gp.domain.Tranche;
 import com.gp.domain.Utilisateur;
 import com.gp.service.*;
 import com.outils.gp.Fichier;
@@ -39,6 +41,12 @@ public class AdminCTRL {
 	private RoleService roleService;
 	@Autowired
 	private ExerciceService exerciceService;
+	@Autowired
+	private BaremeService baremeService;
+	@Autowired
+	private TrancheService trancheService;
+	
+	
 	
 	@RequestMapping(value={"/accueil","/"},method = RequestMethod.GET)
 	public String loginReussi(ModelMap model){
@@ -282,14 +290,106 @@ public class AdminCTRL {
 	public String creerbareme(ModelMap model){
 		model.addAttribute("link", "bareme");
 		model.addAttribute("action", "creer");
+		model.addAttribute("t-act", "ajout-bareme");
+		System.out.println("Bagara");
+		model.addAttribute("baremeAction", "ajout-bareme");
 		return "admin/creerbareme";
 		
 	}
+	@RequestMapping(value="/gerer-baremes/creer",method = RequestMethod.POST)
+	public String creerbaremeSubmit(ModelMap model,
+			@ModelAttribute("bareme") Bareme bareme,
+			@ModelAttribute("tranche") Tranche tranche,
+			HttpServletRequest eq){
+		
+		String action = eq.getParameter("action");
+		model.addAttribute("link", "bareme");
+		model.addAttribute("action", "tranche");
+		model.addAttribute("baremeAction", "ajout-tranche");
+		System.out.println(action);
+		if(action.equals("a-b")){
+		
+			baremeService.enregistrer(bareme);
+			model.addAttribute("bareme", bareme);
+		}else{
+			Bareme b = baremeService.trouverParId(
+					Integer.parseInt(eq.getParameter("idbareme"))
+					);
+			tranche.setBareme(b);
+			trancheService.enregistrer(tranche);
+			model.addAttribute("bareme",baremeService.trouverParId(b.getBaremeId()) );
+		}
+		
+		return "admin/creerbareme";
+		
+	}
+	@RequestMapping(value="/gerer-baremes/ajout-tranche/{idBareme}",method = RequestMethod.POST)
+	public String Ajouttranche(ModelMap model,
+			@ModelAttribute("bareme") Bareme bareme,
+			@ModelAttribute("tranche") Tranche tranche,
+			HttpServletRequest eq){
+		
+		String action = eq.getParameter("action");
+		model.addAttribute("link", "bareme");
+		model.addAttribute("action", "tranche");
+		model.addAttribute("baremeAction", "ajout-tranche");
+		System.out.println(action);
+		if(action.equals("a-b")){
+		
+			baremeService.enregistrer(bareme);
+			model.addAttribute("bareme", bareme);
+		}else{
+			Bareme b = baremeService.trouverParId(
+					Integer.parseInt(eq.getParameter("idbareme"))
+					);
+			tranche.setBareme(b);
+			trancheService.enregistrer(tranche);
+			model.addAttribute("bareme",baremeService.trouverParId(b.getBaremeId()) );
+		}
+		
+		return "admin/creerbareme";
+		
+	}
+	@RequestMapping(value="/gerer-baremes/ajout-tranche/{idBareme}",method = RequestMethod.GET)
+	public String creerTranchebaremeSubmit(ModelMap model,
+			@ModelAttribute("tranche") Tranche tranche,
+			@PathVariable("idBareme") Integer idBareme,
+			HttpServletRequest eq){
+		
+		model.addAttribute("link", "bareme");
+		model.addAttribute("action", "tranche");
+		model.addAttribute("baremeAction", "ajout-tranche");
+		model.addAttribute("bareme",baremeService.trouverParId(idBareme) );
+		
+		return "admin/creerbareme";
+	}
+	
 	@RequestMapping(value="/gerer-baremes/consulter",method = RequestMethod.GET)
-	public String listerbareme(ModelMap model){
+	public String listerbareme(ModelMap model,
+			HttpServletRequest req){
 		model.addAttribute("link", "bareme");
 		model.addAttribute("action", "lister");
+		try{
+			Integer c = Integer.parseInt(req.getParameter("char"));
+			model.addAttribute("baremes", baremeService.trouverParCaractere(c));
+		}catch(Exception e){
+			model.addAttribute("baremes", baremeService.trouverParCaractere(1));
+		}
 		return "admin/listerbareme";
+		
+	}
+	@RequestMapping(value="/gerer-baremes/modifier/{idBareme}",method = RequestMethod.GET)
+	public String modifierbareme(ModelMap model,
+			@PathVariable("idBareme") Integer idBareme,
+			HttpServletRequest req){
+		model.addAttribute("link", "bareme");
+		model.addAttribute("action", "modifier");
+		try{
+			model.addAttribute("bareme", baremeService.trouverParId(idBareme));
+		}catch(Exception e){
+			
+		}
+		return "admin/modifierbareme";
 		
 	}
 	/*___________________________________________________________
